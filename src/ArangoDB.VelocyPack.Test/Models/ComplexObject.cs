@@ -39,7 +39,7 @@ namespace ArangoDB.VelocyPack.Test.Models
 
         public TimeSpan TimeSpan { get; set; }
 
-        public dynamic Dynamic { get; set; }
+        //public dynamic Dynamic { get; set; }
 
         public ComplexObject Nested { get; set; }
 
@@ -49,14 +49,14 @@ namespace ArangoDB.VelocyPack.Test.Models
         
         public ComplexObject()
         {
-            Dynamic = new ExpandoObject();
+            //Dynamic = new ExpandoObject();
         }
 
         public static ComplexObject Create()
         {
-            dynamic d = new ExpandoObject();
-            d.a = 1;
-            d.b = "some string";
+            //dynamic d = new ExpandoObject();
+            //d.a = 1;
+            //d.b = "some string";
 
             return new ComplexObject
             {
@@ -71,7 +71,7 @@ namespace ArangoDB.VelocyPack.Test.Models
                     [3]=3
                 },
                 Double = 3d,
-                Dynamic = d,
+                //Dynamic = d,
                 Int = -5,
                 ListInt = new List<int> { 1,2,3},
                 Long = 8L,
@@ -119,11 +119,11 @@ namespace ArangoDB.VelocyPack.Test.Models
             if (o.Double != c.Double)
                 return false;
 
-            if (o.Dynamic.a != c.Dynamic.a)
-                return false;
+            //if (o.Dynamic.a != c.Dynamic.a)
+            //    return false;
 
-            if (o.Dynamic.b != c.Dynamic.b)
-                return false;
+            //if (o.Dynamic.b != c.Dynamic.b)
+            //    return false;
 
             if (o.Int != c.Int)
                 return false;

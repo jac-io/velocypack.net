@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>.NET implementation for ArangoDB VelocyPack</Description>
+    <AssemblyTitle>ArangoDB VelocyPack</AssemblyTitle>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <VersionPrefix>0.1.0</VersionPrefix>
+    <Authors>raoof hojat</Authors>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>ArangoDB.VelocyPack</AssemblyName>
+    <PackageId>ArangoDB.VelocyPack</PackageId>
+    <PackageTags>ArangoDB;Arango;VelocyPack;Serialization;Compact</PackageTags>
+    <PackageProjectUrl>https://github.com/ra0o0f/velocypack.net</PackageProjectUrl>
+    <PackageLicenseUrl>https://raw.github.com/ra0o0f/velocypack.net/master/LICENSE.md</PackageLicenseUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>git://github.com/ra0o0f/velocypack.net</RepositoryUrl>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.1' ">
+    <DefineConstants>$(DefineConstants);NETSTANDARD1_1;PORTABLE</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="newtonsoft.json" Version="11.0.2" />
+  </ItemGroup>
+
+</Project>
